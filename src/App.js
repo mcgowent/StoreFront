@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from './components/forms/Form';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form />
     </div>
   );
 }
 
 export default App;
+
+
+/** What do I need to do first?
+ * 
+ * Create a Login.
+ * 
+ * Email
+ * Password
+ * 
+ * If you are logged in you should be able to Create
+ * a new Listing.
+ * 
+ * Name of Product
+ * Description
+ * URL
+ * Price
+ * 
+ * Each time a new listing is added it should show automatically in the list.
+ * 
+ * Get this far and then figure out the next step.
+ * 
+ */
