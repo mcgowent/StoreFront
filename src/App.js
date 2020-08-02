@@ -1,9 +1,17 @@
 import React from 'react';
 import Form from './components/forms/SignupForm';
+import Nav from './components/nav/Nav';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faShoppingCart, faChevronDown);
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Form />
     </div>
   );

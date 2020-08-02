@@ -1,6 +1,7 @@
 // Build form here.
 
 import React, { useState } from 'react';
+import axios from 'axios';
 import './forms.css';
 
 const Forms = () => {
@@ -9,6 +10,10 @@ const Forms = () => {
         psw: "",
         pswRepeat: ""
     })
+    const [displayUser, setDisplayUser] = useState({
+        email: "",
+        psw: ""
+    });
 
     const handleChange = event => {
         setUser({ ...user, [event.target.name]: event.target.value })
@@ -16,6 +21,14 @@ const Forms = () => {
 
     const handleSubmit = event => {
         console.log("User Created: ", user)
+        axios
+            .post('https://reqres.in/api/users/', user)
+            .then(res => {
+                console.log(res);
+                setDisplayUser(res.data);
+            })
+            .catch(err => console.log(err.response));
+        
         setUser({ email: '', psw: '', pswRepeat: ''})
         event.preventDefault();
     }
@@ -23,8 +36,9 @@ const Forms = () => {
         <div className="form-cont">
             {console.log(user)}
             <form onSubmit={event => handleSubmit(event)}>
+            <h3>Sign Up to Test the Store.</h3>
                 <input 
-                    type="text" 
+                    type="email" 
                     placeholder="Enter Email" 
                     name="email" 
                     required 
@@ -53,6 +67,10 @@ const Forms = () => {
                 </div>
                 <p>Already have an account? <a href="#">Signin here</a></p>
             </form>
+            <div className="newUsers">
+                <h3>Name: {displayUser.email}</h3>
+                <h3>Password: {displayUser.psw}</h3>
+            </div>
         </div>
     )
 }

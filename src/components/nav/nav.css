@@ -1,0 +1,127 @@
+.nav {
+    background-color: #fff;
+    height: 10%;
+    width: 100%;
+    z-index: 99;
+    position: relative;
+    margin-top: 0;
+}
+.nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.nav ul li {
+    padding: 20px 0;
+    align-self: center;
+    position: relative;
+}
+.nav ul li:first-child {
+    padding: 0;
+}
+.nav ul li a,
+.nav ul li {
+    color: #333333;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color ease-in .15s, background-color ease-in .15s;
+}
+.nav ul li a {
+    padding: 2px 0;
+}
+
+.nav ul li:last-child {
+    color: tomato;
+}
+.nav ul .hasDropdown ul li {
+    color: #fff;
+}
+.nav .fa-shopping-cart {
+    background-color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+} 
+
+.nav ul .logo,
+.nav ul .logo a {
+    font-size: 30px;
+    color: tomato;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    padding:0;
+    transition: color ease-in .15s;
+}
+.nav ul li:hover {
+    background-color: tomato;
+}
+.nav ul li ul li:hover,
+.nav ul li ul li:first-child:hover {
+    background-color: rgb(255, 59, 24)
+}
+.nav ul li:hover a {
+    background-color: #fff;
+    color: #333333c0;
+}
+.nav ul li:first-child:hover h3,
+.nav ul li:first-child:hover a {
+    background-color: #fff;
+    color: #333333;
+}
+
+/* Dropdown Code */
+.nav .hasDropdown {
+    display: block;
+    transition-delay: 0.2s;
+}
+.nav .hasDropdown:hover {
+    cursor: pointer;
+}
+.nav .hasDropdown .fa-chevron-down {
+    transition: transform .5s;
+}
+.nav .hasDropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform .5s;
+}
+.nav .hasDropdown li,
+.nav ul li ul li:first-child {
+    color: #fff;
+    background: tomato;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+ul li ul {
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    display: none;
+    padding-left:0;
+    margin:0;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
