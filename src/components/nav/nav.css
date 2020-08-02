@@ -5,13 +5,14 @@
     z-index: 99;
     position: relative;
     margin-top: 0;
+    /* top:-16px; */
 }
 .nav ul {
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+    margin-top: 0;
 }
 .nav ul li {
     padding: 20px 0;
@@ -61,15 +62,20 @@
     background-color: tomato;
 }
 .nav ul li ul li:hover,
-.nav ul li ul li:first-child:hover {
+.nav ul li ul li:first-child:hover,
+.nav ul li ul li:hover a {
     background-color: rgb(255, 59, 24)
 }
-.nav ul li:hover a {
+.nav ul li ul li a {
+    color: #fff;
+}
+.nav .topLevel > li:hover > a {
     background-color: #fff;
     color: #333333c0;
 }
-.nav ul li:first-child:hover h3,
-.nav ul li:first-child:hover a {
+
+.nav .topLevel > li:first-child:hover > h3,
+.nav .topLevel > li:first-child:hover > a {
     background-color: #fff;
     color: #333333;
 }
@@ -100,7 +106,7 @@
     text-decoration: none;
     transition-duration: 0.2s;
 }
-ul li ul {
+.nav ul li ul {
     background: #fff;
     visibility: hidden;
     opacity: 0;
@@ -112,15 +118,17 @@ ul li ul {
     padding-left:0;
     margin:0;
 }
-
-ul li:hover > ul,
-ul li ul:hover {
+.nav ul li ul a {
+    background-color: tomato;
+}
+.nav ul li:hover > ul,
+.nav ul li ul:hover {
     visibility: visible;
     opacity: 1;
     display: block;
 }
 
-ul li ul li {
+.nav ul li ul li {
     clear: both;
     width: 100%;
 }

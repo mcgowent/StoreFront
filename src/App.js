@@ -1,18 +1,21 @@
 import React from 'react';
 import Form from './components/forms/SignupForm';
 import Nav from './components/nav/Nav';
+import Footer from './components/footer/Footer';
+import "normalize.css";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { fab, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faShoppingCart, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faShoppingCart, faChevronDown);
+library.add(fab, faShoppingCart, faChevronDown, faChevronRight, faFacebookSquare);
 
 function App() {
   return (
     <div className="App">
       <Nav />
       <Form />
+      <Footer />
     </div>
   );
 }

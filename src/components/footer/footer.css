@@ -1,0 +1,51 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: #333333;
+    z-index: 100;
+}
+.footer .inProgress {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 1.3em;
+    text-align: center;
+}
+.footer ul {
+    list-style: none;
+}
+.footer ul li {
+    color: #fff;
+    padding: 5px 0;
+}
+.footer ul li a,
+.footer ul li ul li a {
+    font-size: 14px;
+    color:#fff;
+    text-decoration: none;
+}
+.footer ul li a:hover,
+.footer ul li ul li a:hover {
+    color: tomato;
+}
+.footer .fa-chevron-right {
+    font-size: 12px;
+}
+
+.footer .cols {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .cols .col-2 {
+    padding-right: 10%;
+    line-height: 1.3em;
+}
+.footer .cols .col-2 .fa-facebook {
+    font-size: 25px;
+}
