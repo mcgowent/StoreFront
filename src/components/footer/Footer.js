@@ -28,10 +28,10 @@ return (
                     <li><a href="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
                     <li><a href="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
                     <li><a href="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
-                    <li>The Store Front&copy;Copyright Timothy McGowen</li>
-                </ul>
+                    </ul>
             </div>
         </div>
+        <p>The Store Front&copy;Copyright Timothy McGowen</p>
     </div>
 )
 }

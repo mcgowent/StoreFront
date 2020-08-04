@@ -1,7 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Form from './components/forms/SignupForm';
+import Home from './components/home/Home';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
+import About from './components/about/About';
+import { Route } from "react-router-dom";
+
 import "normalize.css";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -14,7 +19,8 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Form />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
       <Footer />
     </div>
   );
